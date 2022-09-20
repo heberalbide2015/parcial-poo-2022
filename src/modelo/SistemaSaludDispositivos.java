@@ -73,6 +73,20 @@ public class SistemaSaludDispositivos {
 		return objeto;
 		
 	}
+	
+	public boolean ValidarCodigo(String codigo){
+		boolean resultado = false;
+		if(codigo.length() == 5){
+			
+			char letra = codigo.charAt(0);
+			int suma = Character.getNumericValue(codigo.charAt(1)) + Character.getNumericValue(codigo.charAt(2)) + Character.getNumericValue(codigo.charAt(3)) + Character.getNumericValue(4);
+			
+			if((letra == 'A' && suma%2 == 0 ) || (letra == 'B' && suma%2 != 0){
+				resultado = true;
+			}
+		}
+		return resultado
+	}
 		
 	
 
